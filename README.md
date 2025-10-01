@@ -1,3 +1,37 @@
+## Football Team Analytics (Streamlit)
+
+Analyze player performance from tracking and event CSV data. Upload your own data or use the included sample to explore KPIs, time series, radar charts, and a pitch heatmap.
+
+### Features
+- Upload CSV with flexible column names (auto-coercion)
+- KPIs per player: minutes, distance, speed, sprints, heart rate, pass %, xG
+- Visualizations: time series (speed & HR), radar chart, pitch heatmap
+- Sample dataset for demo
+
+### Expected Columns
+Any subset is accepted; missing fields are inferred when possible.
+- player_id, player_name
+- timestamp (ISO) or minute
+- distance_m, speed_mps, accel_mps2
+- heart_rate
+- pass_attempted, pass_completed
+- shot_xg
+- x, y (0-100)
+- sprint (bool/0-1)
+
+### Quickstart
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Then open the local URL that Streamlit prints, and either upload your CSV or click "Load sample dataset".
+
+### Sample Data
+Included at `sample_data/sample_events.csv`.
+
 # Football Dictionaries
 
 This project will deal with two of our greatest passions: dictionaries and football! 😉 This will require the use of nested collections (lists of lists, dicts nested under lists, etc) and nested control flow structures. It's the final challenge regarding collections for our course. If you can complete this project, you'll become a **Master of Data and Collections** and you might even get a gold star.
